@@ -144,7 +144,7 @@ main {
       line-height: 100px;
     }
   }
-  /*サービスセクションの設定*/
+  /*プロフィールセクションの設定*/
   section#profile {
     margin-bottom: 160px;
     justify-content: center;
@@ -162,6 +162,12 @@ main {
       color: var(--Portfolio-Tan);
       font-weight: var(--Portforio-Bold);
     }
+    hr {
+      margin-bottom: 30px;
+      margin-inline: auto;
+      width: 650px;
+      color: var(--Portfolio-Tan);
+    }
     div.info {
       P {
         text-align: center;
@@ -172,11 +178,93 @@ main {
         font-size: var(--Portfolio-16);
       }
     }
-    hr {
-      margin-bottom: 30px;
-      margin-inline: auto;
-      width: 645px;
-      color: var(--Portfolio-Tan);
+  }
+  /*制作実績セクションの設定*/
+  section#works {
+    width: 700px;
+    margin-inline: auto;
+    margin-bottom: 160px;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 64px;
+      margin-bottom: 80px;
+      li {
+        text-align: left;
+      }
+      figure,
+      h4,
+      p {
+        margin-bottom: 24px;
+      }
+      h4 {
+        font-weight: var(--Portforio-Bold);
+      }
+      p {
+        display: inline;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background-color: var(--Portfolio-Gray);
+      }
     }
   }
+  /*趣味セクションの設定*/
+  section#hobby {
+    margin-bottom: 160px;
+    div.icon-group {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      width: 1440px;
+      article {
+        width: 300px;
+        figure {
+          margin-bottom: 16px;
+          img {
+            margin-bottom: 24px;
+          }
+          figcaption {
+            font-size: var(--Portfolio-24);
+            font-weight: var(--Portforio-Bold);
+          }
+        }
+        p {
+          margin-bottom: 64px;
+          font-size: var(--Portfolio-14);
+          text-align: center;
+        }
+      }
+    }
+    ul {
+      width: 1028px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 64px;
+      margin-bottom: 80px;
+      li {
+        text-align: center;
+      }
+    }
+  }
+  /* 連絡先の設定 */
+  section#contact {
+    ul {
+      width: 1440px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
+}
+/* フッターの設定
+----------------------------------------------- */
+footer {
+  padding: 10px 40px;
+  background-color: var(--Portfolio-Tan);
+  font-size: var(--Portfolio-14);
+  color: var(--Portfolio-White);
+  text-align: right;
 }
