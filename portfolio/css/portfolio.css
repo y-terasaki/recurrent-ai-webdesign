@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* 共通設定
+-------------------------------------*/
+:root {
+  /* 最小値としての定義 */
+  --unit: 0.625rem; /* ブラウザ標準（16px) *0.625 = 10px相当 */
+
+  /* Color Style */
+  --Portfolio-Black: #000000;
+  --Portfolio-White: #ffffff;
+  --Portfolio-Tan: #d2b48c;
+  --portfolio-Light-Tan: #d2b48c2b;
+  --Portfolio-Gray: #eeeeee;
+
+  /* Font Size */
+  --Portfolio-12: calc(var(--unit) * 1.2);
+  --Portfolio-14: calc(var(--unit) * 1.4);
+  --Portfolio-16: calc(var(--unit) * 1.6);
+  --Portfolio-18: calc(var(--unit) * 1.8);
+  --Portfolio-24: calc(var(--unit) * 2.4);
+  --Portfolio-32: calc(var(--unit) * 3.2);
+  --Portfolio-48: calc(var(--unit) * 4.8);
+  --Portfolio-64: calc(var(--unit) * 6.4);
+
+  /* Font Weight */
+  --Portforio-Regular: 400;
+  --Portforio-Bold: 700;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth; /*スクロールをスムーズにする設定*/
+}
+body {
+  font-optical-sizing: auto; /*フォントが潰れるのを防ぐ(Webフォントを利用する際などに設定）*/
+  font-style: normal;
+  font-weight: var(--Portforio-Regular);
+  font-family:
+    "Noto Sans JP", "Source Sans Pro", "Hiragino Kaku Gothic ProN", "メイリオ",
+    "Meiryo", "Arial", sans-serif;
+  color: var(--Portfolio-Black);
+}
+a {
+  color: var(--Portfolio-Black);
+  text-decoration: none; /* 下線を非表示 */
+}
+ul {
+  list-style-type: none;
+}
+/* トップフレームの設定 */
+.container {
+  width: 1440px;
+  margin-inline: auto;
+}
+/* ヘッダーの設定
+-------------------------------------*/
+header {
+  position: fixed;
+  top: 0;
+  left: 50%; /* 一旦画面の真ん中に寄せる */
+  transform: translateX(-50%); /* 自身の幅の半分だけ左に戻して中央寄せ */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1440px;
+  padding: 24px 40px;
+  background-color: var(--Portfolio-White);
+  /* ロゴ */
+  h1 {
+    font-size: var(--Portfolio-24);
+    font-weight: var(--Portforio-Bold);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    /* メニュー */
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    /* ボタン */
+    p {
+      a {
+        padding: 10px 48px;
+        border-radius: 50px;
+        background-color: var(--Portfolio-Tan);
+        color: var(--Portfolio-White);
+      }
+      a:hover {
+        background-color: antiquewhite; /* マウスオーバー時の色 */
+      }
+    }
+  }
+}
+/* メインコンテンツの設定
+----------------------------------------------- */
+main {
+  /* セクション共通 */
+  section {
+    text-align: center;
+  }
+  /* メインビジュアルの設定
+----------------------------------------------- */
+  section#main-visual {
+    width: 1440px;
+    height: 720px;
+    margin-top: 90px;
+    margin-bottom: 160px;
+
+    background-image: url(../images/MV.svg);
+
+    /* 表示テキスト */
+    P {
+      text-align: center;
+      font-style: italic;
+      font-size: var(--Portfolio-48);
+      font-weight: var(--Portforio-Bold);
+      background-color: antiquewhite;
+    }
+  }
+}
