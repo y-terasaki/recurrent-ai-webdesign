@@ -25,6 +25,14 @@
   /* Font Weight */
   --Portforio-Regular: 400;
   --Portforio-Bold: 700;
+
+  /* Font Family の定義 */
+  --font-base: "Noto Sans JP", sans-serif; /* 本文・日本語用 */
+  --font-logo: "Monoton", cursive; /* ロゴ・インパクト用 */
+}
+
+body {
+  font-family: var(--font-base);
 }
 html {
   font-size: 100%;
@@ -99,24 +107,76 @@ main {
   /* セクション共通 */
   section {
     text-align: center;
+    h2 {
+      font-size: var(--Portfolio-48);
+      font-weight: var(--Portforio-Bold);
+    }
+    h3 {
+      margin-bottom: 64px;
+      font-size: var(--Portfolio-14);
+      font-weight: var(--Portforio-Bold);
+      color: var(--Portfolio-Tan);
+    }
   }
   /* メインビジュアルの設定
 ----------------------------------------------- */
   section#main-visual {
+    display: flex;
+    align-items: center;
     width: 1440px;
-    height: 720px;
+    height: 960px;
     margin-top: 90px;
     margin-bottom: 160px;
-
     background-image: url(../images/MV.svg);
-
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
     /* 表示テキスト */
     P {
-      text-align: center;
-      font-style: italic;
+      width: 1440px;
+      height: 100px;
+      color: var(--Portfolio-Black);
       font-size: var(--Portfolio-48);
       font-weight: var(--Portforio-Bold);
-      background-color: antiquewhite;
+      font-family: var(--font-logo);
+      background-color: #ffffffaa;
+      line-height: 100px;
+    }
+  }
+  /*サービスセクションの設定*/
+  section#profile {
+    margin-bottom: 160px;
+    justify-content: center;
+    p {
+      font-size: var(--Portfolio-32);
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: var(--Portfolio-24);
+      margin-bottom: 30px;
+    }
+    li:nth-of-type(2n + 2) {
+      color: var(--Portfolio-Tan);
+      font-weight: var(--Portforio-Bold);
+    }
+    div.info {
+      P {
+        text-align: center;
+        display: flex;
+        width: 480px;
+        height: 100px;
+        margin-inline: auto;
+        font-size: var(--Portfolio-16);
+      }
+    }
+    hr {
+      margin-bottom: 30px;
+      margin-inline: auto;
+      width: 645px;
+      color: var(--Portfolio-Tan);
     }
   }
 }
