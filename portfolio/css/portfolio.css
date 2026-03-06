@@ -162,15 +162,13 @@ main {
       color: var(--Portfolio-Tan);
       font-weight: var(--Portforio-Bold);
     }
-    hr {
+    img {
       margin-bottom: 30px;
-      margin-inline: auto;
-      width: 650px;
-      color: var(--Portfolio-Tan);
     }
     div.info {
+      margin-bottom: 30px;
       P {
-        text-align: center;
+        text-align: start;
         display: flex;
         width: 480px;
         height: 100px;
@@ -231,7 +229,7 @@ main {
         p {
           margin-bottom: 64px;
           font-size: var(--Portfolio-14);
-          text-align: center;
+          text-align: start;
         }
       }
     }
@@ -249,22 +247,44 @@ main {
   }
   /* 連絡先の設定 */
   section#contact {
-    ul {
-      width: 1440px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      align-items: center;
-      margin-bottom: 30px;
-    }
+    width: 100%;
+    max-width: 1440px;
+    margin: 60px auto 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: linear-gradient(to right, #f2f2f2, #e0e0e0);
+  }
+  /* figure内 */
+  section#contact figure img,
+  section#contact p {
+    margin-bottom: 30px;
+  }
+  /* アイコンリスト */
+  section#contact ul {
+    width: 650px;
+    height: 120px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: center;
+  }
+  section#contact ul li img {
+    transition: 0.3s;
+  }
+  /* マウスオーバー */
+  section#contact ul li:hover img {
+    filter: brightness(0) saturate(100%) invert(60%);
   }
 }
 /* フッターの設定
 ----------------------------------------------- */
-footer {
-  padding: 10px 40px;
-  background-color: var(--Portfolio-Tan);
-  font-size: var(--Portfolio-14);
-  color: var(--Portfolio-White);
+.footer {
+  display: block;
   text-align: right;
+  background: linear-gradient(to right, #d2b48c2b, tan);
+  padding: 20px 40px;
+  font-size: var(--Portfolio-24);
+  font-family: var(--font-logo);
+  color: var(--Portfolio-White);
 }
